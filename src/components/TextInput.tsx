@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import React from 'react';
+// import { useEffect, useState } from "react";
 
 export interface TextInputProps {
   onTextChange: (text: string) => void;
@@ -6,23 +8,12 @@ export interface TextInputProps {
   initialValue?: string;
 }
 
-// export const TextInput: React.FC<TextInputProps> = ({
-//     onTextChange,
-//     placeholder = 'start tyopimg',
-//     initialValue = ''
-// }) => {
-//     const 
-// }
-
-
-function TextInput({
-  onTextChange,
-  placeholder = "",
-  initialValue = "",
-}: TextInputProps) {
+// js               react begins here                                 typescript
+function TextInput({onTextChange, placeholder = "", initialValue = ""}: TextInputProps) {
   return (
-    <div>
+       <div className="w-full">
       <textarea
+       className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
         cols={80}
         rows={20}
         onChange={(e) => onTextChange(e.target.value)}
